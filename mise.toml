@@ -42,3 +42,9 @@ run = "pip install -e . && mflux-commander"
 [tasks.test]
 description = "Run tests"
 run = "python -m pytest"
+
+
+[tasks.freeze]
+description = "Generate requirements.txt from current environment"
+alias = "f"
+run = "uv pip freeze > requirements.txt"
